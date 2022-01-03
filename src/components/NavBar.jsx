@@ -17,7 +17,7 @@ function NavBar() {
                             <p class="nav-link">Inicio</p> 
                             </li>
                             <li class="nav-item">
-                            <p >Colección</p> 
+                            <p class="nav-link">Colección</p> 
                             </li>
                             <li class="nav-item">
                             <p class="nav-link">Contacto</p>
