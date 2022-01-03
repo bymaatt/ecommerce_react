@@ -17,13 +17,13 @@ function NavBar() {
                             <a class="nav-link" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Colección</a>
+                            <a class="nav-link" href="#">Colección </a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link disabled">Tienda</a>
+                            <a class="nav-link">Tienda</a>
                             </li>
                         </ul>
                     </div>
