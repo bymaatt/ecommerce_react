@@ -42,8 +42,10 @@ nav{
 }
 
 #carrito{
-    display: block;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
     width: 2rem;
     height: 1.7rem;
     
