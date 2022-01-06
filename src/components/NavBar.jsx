@@ -1,4 +1,5 @@
 import React from 'react';
+import CartWidget from './CartWidget';
 
 
 
@@ -26,6 +27,7 @@ function NavBar() {
                             <p class="nav-link">Tienda</p>
                             </li>
                         </ul>
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>

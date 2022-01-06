@@ -40,3 +40,9 @@
 nav{
   font-family: "Oswald", sans-serif;
 }
+
+#carrito{
+    display: inline-block;
+    text-align: right;
+    
+}
