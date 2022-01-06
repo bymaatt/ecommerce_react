@@ -3,7 +3,7 @@ import React from 'react'
 function CartWidget() {
     return (
         <div>
-            <img id='carrito' src="../../public/carrito_compra.png" alt="carrito" />
+            <img id='carrito' src="./carrito.png" alt="carrito" />
         </div>
     )
 }

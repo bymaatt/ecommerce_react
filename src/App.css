@@ -42,7 +42,11 @@ nav{
 }
 
 #carrito{
-    display: inline-block;
+    display: block;
     text-align: right;
+    width: 2rem;
+    height: 1.7rem;
+    
+
     
 }
