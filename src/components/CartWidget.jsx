@@ -1,10 +1,10 @@
 import React from 'react'
-import carrito from './assets/img/carrito.png'
+import carro from '../assets/png/carrito.png'
 
 function CartWidget() {
     return (
         <div>
-            <img id='carrito' src={carrito} alt="carrito" />
+            <img id='carrito' src={carro} alt="carrito" />
         </div>
     )
 }
