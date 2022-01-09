@@ -1,3 +1,7 @@
+*{
+  font-family: "Oswald", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -44,7 +48,4 @@ nav{
 #carrito{
     width: 2rem;
     height: 1.7rem;
-    
-
-    
 }
