@@ -6,13 +6,9 @@
     align-items: center;
     justify-content: space-around ;
 }
-/* .arreglo_img{
-    
-} */
+
 .arreglo_description{
     margin: 0;
-    /* padding-top: 1.5rem; */
-    /* align-items: center; */
 }
 .arreglo_description h2{
     font-size: 4rem;
@@ -21,7 +17,7 @@
     font-size: 1.5rem;
 }
 #img_arreglo{
-    width: 33rem;
-    height: 32rem;
+    width: 25rem;
+    height: 24rem;
     margin: 1rem;
 };
