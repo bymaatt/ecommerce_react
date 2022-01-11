@@ -8,7 +8,7 @@ const productos = [
     },
     {
         "nombre": "Spiderman",
-        "": "El buen vecino",
+        "descripcion": "El buen vecino",
         "precio": 5500,
         "stock": 10,
         "imagen": "/spiderman.jpg",
