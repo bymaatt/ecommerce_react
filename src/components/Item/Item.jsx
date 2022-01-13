@@ -5,7 +5,7 @@ import './Item.css'
 
 function Item({productos}) {
     return (
-        <div className='arreglo_mio'>
+        <div id='ItemList' className='arreglo_mio'>
             <div className='arreglo_img'>
                 <img id="img_arreglo" src={productos.imagen} className="card-img-top" alt={productos.nombre}/>
             </div>
