@@ -1,6 +1,7 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
-import { traerProductos } from '../../../../arch/Productos/Productos'
+import { traerProductos } from '../Productos/Productos'
+import ItemDetail from '../ItemDetailsContainer/ItemDetail/ItemDetail'
 
 const ItemDetailsContainer = () => {
 
@@ -15,7 +16,7 @@ const ItemDetailsContainer = () => {
 
     return (
         <div>
-            <ItemDetail producto = {producto}/>
+            
         </div>
     )
 }

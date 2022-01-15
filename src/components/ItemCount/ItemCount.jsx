@@ -17,9 +17,10 @@ const ItemCount =({min, max}) => {
     }
     return (
         <div>
-            <a href="/#" className="btns1 btn-dark" onClick={sumarCarrito}>Agregar al carrito</a>
-            <a href="/#" className="btns btn-primary" onClick={restarCarrito}>Restar Carrito</a>
-            <a href="/#" className="btns2 btn-warning" onClick={reset}>Eliminar</a>
+            <button href="" className="btns1 btn-dark" onClick={sumarCarrito}>+</button>
+            <button href="" className="btns2 btn-warning" onClick={reset}>Eliminar</button>
+            <button href="" className="btns btn-primary" onClick={restarCarrito}>-</button>
+            
             <p className='contador'>Cant: {counter}</p>
         </div>
     )
