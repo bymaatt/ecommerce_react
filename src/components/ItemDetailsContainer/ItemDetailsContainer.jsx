@@ -1,24 +1,25 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
+import ItemDetail from './ItemDetail/ItemDetail'
 import { traerProductos } from '../Productos/Productos'
-import ItemDetail from '../ItemDetailsContainer/ItemDetail/ItemDetail'
 
 const ItemDetailsContainer = () => {
 
-    const [producto, setproducto] = useState({})
+    const [product, setProduct] = useState({})
+
 
     useEffect (() => {
-        traerProductos
-        .then (resp => setproducto(resp.find(productos => productos=> productos.id === "1")))
+        traerProductos.then (resp => setProduct(resp.find(product => product.id==="1") ))
     }, [])
 
-    console.log(producto)
+    console.log(product)
 
     return (
         <div>
-            
+            <ItemDetail product= {product}/>
         </div>
     )
 }
+
 
 export default ItemDetailsContainer
