@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 
 function Item({productos}) {
@@ -12,7 +13,9 @@ function Item({productos}) {
             <div className="arreglo_description">
                 <h2 className="card-title">{productos.nombre}</h2>
                 <p className="card-text">Descripción: {productos.descripcion}</p>
-                <button className="btns1 btn-dark">Detalle de Producto</button>
+                <Link to='/detalle'>
+                    <button className="btns1 btn-dark">Detalle de Producto</button>
+                </Link>
                 <h6 className="card-title">stock: {productos.stock} unidades</h6>
                 
             </div>

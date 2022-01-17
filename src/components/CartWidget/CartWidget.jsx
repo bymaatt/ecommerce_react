@@ -5,7 +5,7 @@ import carro from '../../assets/png/carrito.png'
 function CartWidget() {
     return (
         <div>
-            <a href="/#"><img id='carrito' src={carro} alt="carrito" /></a>
+            <img id='carrito' src={carro} alt="carrito" />
         </div>
     )
 }
