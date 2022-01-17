@@ -11,9 +11,8 @@ function Item({productos}) {
             </div>
             <div className="arreglo_description">
                 <h2 className="card-title">{productos.nombre}</h2>
-                <h3>$ {productos.precio}</h3>
                 <p className="card-text">Descripción: {productos.descripcion}</p>
-                <ItemCount min = {1} max = {productos.stock} reset= {0} />
+                <button className="btns1 btn-dark">Detalle de Producto</button>
                 <h6 className="card-title">stock: {productos.stock} unidades</h6>
                 
             </div>
