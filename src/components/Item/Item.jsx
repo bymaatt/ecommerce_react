@@ -13,7 +13,7 @@ function Item({productos}) {
             <div className="arreglo_description">
                 <h2 className="card-title">{productos.nombre}</h2>
                 <p className="card-text">Descripción: {productos.descripcion}</p>
-                <Link to='/detalle'>
+                <Link to={`/detalle/${productos.id}`}>
                     <button className="btns1 btn-dark">Detalle de Producto</button>
                 </Link>
                 <h6 className="card-title">stock: {productos.stock} unidades</h6>
