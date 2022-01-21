@@ -18,6 +18,7 @@ function App() {
           <Route exact path='/'element= {<ItemListContainer greeting='¡Bienvenidos a mi tienda!' />} />
           
           <Route exact path='/detalle/:idDetalle' element = {<ItemDetailsContainer />}/>
+          <Route exact path='/detalle/:idCategoria' element = {<ItemDetailsContainer />}/>
           
           <Route exact path='/Cart' element= {<Cart />}/>
 
