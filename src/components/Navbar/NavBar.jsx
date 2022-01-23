@@ -27,7 +27,7 @@ function NavBar() {
                                 <a href="/#ItemList" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías de Producto</a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <NavLink className="dropdown-item" to="/categoria/vengadores">Vengadores</NavLink>
-                                        <NavLink className="dropdown-item" to="/categoria/independientes">Heroes independientes</NavLink>
+                                        <NavLink className="dropdown-item" to="/categoria/independientes">Heroes Independientes</NavLink>
                                         <NavLink className="dropdown-item" to="/categoria/mutante">Mutantes</NavLink>
                                     </ul>
                             </li>

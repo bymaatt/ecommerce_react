@@ -8,13 +8,15 @@ const ItemDetailsContainer = () => {
 
     const [product, setProduct] = useState({})
 
-    const {idCategoria} = useParams ()
+    const {idDetalle} = useParams ()
+
     useEffect (() => {
-        traerProductos.then (resp => setProduct(resp.find(product => product.id==="1") ))
-    }, [])
+            traerProductos.then (resp => setProduct(resp.find(product => product.id===idDetalle) ))
+        
+    }, [idDetalle])
 
     console.log(product)
-    console.log(idCategoria)
+    console.log(idDetalle)
 
     return (
         <div>

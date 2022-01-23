@@ -6,7 +6,7 @@ const productos = [
 		"precio": 4500,
         "stock": 10,
 		"imagen": "/iron_man.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
     {
         "id": "2",
@@ -15,7 +15,7 @@ const productos = [
         "precio": 5500,
         "stock": 10,
         "imagen": "/spiderman.jpg",
-        "categoria": "heroe independiente",
+        "categoria": "independientes",
     },
     {
         "id": "3",
@@ -24,7 +24,7 @@ const productos = [
         "precio": 4200,
         "stock": 10,
         "imagen": "/thor.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
     {
         "id": "4",
@@ -33,7 +33,7 @@ const productos = [
         "precio": 3500,
         "stock": 10,
         "imagen": "/hulk.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
     {
         "id": "5",
@@ -51,7 +51,7 @@ const productos = [
         "precio": 4500,
         "stock": 10,
         "imagen": "/capitan_america.jpg",
-        "categoria": "vengador,"
+        "categoria": "vengadores,"
     },
     {
         "id": "7",
@@ -60,7 +60,7 @@ const productos = [
         "precio": 4700,
         "stock": 10,
         "imagen": "/black_widow.jpg",
-        "categoria": "vengador"
+        "categoria": "vengadores"
     },
     {
         "id": "8",
@@ -69,7 +69,7 @@ const productos = [
         "precio": 4200,
         "stock": 10,
         "imagen": "/ant_man.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
     {
         "id": "9",
@@ -78,7 +78,7 @@ const productos = [
         "precio": 4000,
         "stock": 10,
         "imagen": "/capitana_marvel.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
     {
         "id": "10",
@@ -87,7 +87,7 @@ const productos = [
         "precio": 3000,
         "stock": 10,
         "imagen": "/arquero.jpg",
-        "categoria": "vengador",
+        "categoria": "vengadores",
     },
 ];
 
