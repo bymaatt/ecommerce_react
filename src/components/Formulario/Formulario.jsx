@@ -28,17 +28,49 @@ function Formulario() {
     <div>
         <h1>Contactanos</h1>
         <div className='form_gral'>
-          <form onSubmit={handleSubmit}>
-            <div className='item1'>
-            <label for="nombre"> Nombre:</label>
-              <input type="text" name="nombre" id='nombre' onChange={handleImputs}/>
-            </div>
-            <div className='item1'>
-            <label for="apellido"> Apellido:</label>
-              <input type="text" name="apellido" id='apellido' onChange={handleImputs}/>
-            </div>
-            <button type='submit'>Enviar</button>
-          </form>
+          <div className='form_container'>
+            <form onSubmit={handleSubmit}>
+              <div className='principales'>
+                <div className='item1 item2'>
+                  <label for="nombre">
+                    <span>Nombre: *</span>
+                    <input type="text" name="nombre" id='nombre' required onChange={handleImputs}/>
+                  </label>
+                </div>
+                <div className='item1 item2'>
+                  <label for="apellido">
+                    <span>Apellido: *</span>
+                    <input type="text" name="apellido" id='apellido' required onChange={handleImputs}/>
+                  </label>
+                </div>
+                <div className='item1 item2'>
+                  <label for= 'mail'>
+                    <span>email: *</span>
+                    <input type="mail" name='mail' id='mail' required />
+                  </label>
+                </div>
+              </div>
+              <div className='item1'>
+                <label for='asunto'>
+                  <span>Asunto: </span>
+                  <input type="text" list='items' name='asunto' id='asunto' />
+                  <datalist className='select' name='asunto' id='items' simple>
+                    <option> Devolución</option>
+                    <option>Sugerencia</option>
+                    <option>Reclamo</option>
+                    <option>Agradecimiento</option>
+                  </datalist>
+                </label>
+              </div>
+              <div className='item2'>
+                <textarea type="textarea" rows="10" cols="50" placeholder='Escribinos...'/>
+              </div>
+              <div className='boton'>
+                <button className='btns4 btn-dark' type="reset">Borrar</button>
+                <button className='btns4 btn-dark' type='submit'>Enviar</button>
+              </div>              
+            </form>
+          </div>        
         </div>
 
     </div>
