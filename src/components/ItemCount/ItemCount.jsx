@@ -1,7 +1,8 @@
 import './counter.css'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const ItemCount =({min, max}) => {
+const ItemCount =({min, max, onAdd}) => {
 
     const [counter, setCounter] = useState(0)
     
@@ -17,9 +18,13 @@ const ItemCount =({min, max}) => {
     }
     return (
         <div>
-            <button href="" className="btns1 btn-dark" onClick={sumarCarrito}>+</button>
-            <button href="" className="btns2 btn-warning" onClick={reset}>Eliminar</button>
-            <button href="" className="btns btn-primary" onClick={restarCarrito}>-</button>
+            <button className="btns1 btn-dark" onClick={sumarCarrito}>+</button>
+            <button className="btns2 btn-warning" onClick={reset}>Eliminar</button>
+            <button className="btns1 btn-dark" onClick={restarCarrito}>-</button>
+            <br/>
+            <button className="btns1 btn-danger addToCart" onClick={() => onAdd(counter)} disabled={counter < 1 && 'disabled'}>Agregar al carrito</button>
+            <br/>
+            <Link to='/'><button className="btns3 btn-dark">Volver</button> </Link>
             
             <p className='contador'>Cant: {counter}</p>
         </div>

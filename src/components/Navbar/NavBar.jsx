@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -18,13 +18,18 @@ function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                            <a href="/#" className="nav-link">Colección</a> 
+                                <a href="/#" className="nav-link">Colección</a> 
                             </li>
                             <li className="nav-item">
-                            <a href="/#" className="nav-link">Contacto</a>
+                                <Link to='/formulario' className="nav-link">Contacto</Link>
                             </li>
-                            <li className="nav-item">
-                            <a href="/#ItemList" className="nav-link">Tienda</a>
+                            <li className="nav-item dropdown"  >
+                                <a href="/#ItemList" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías de Producto</a>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <NavLink className="dropdown-item" to="/categoria/vengadores">Vengadores</NavLink>
+                                        <NavLink className="dropdown-item" to="/categoria/independientes">Heroes Independientes</NavLink>
+                                        <NavLink className="dropdown-item" to="/categoria/mutante">Mutantes</NavLink>
+                                    </ul>
                             </li>
                         </ul>
                     </div>
