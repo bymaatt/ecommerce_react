@@ -1,0 +1,11 @@
+.form_gral{
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.item1{
+    margin: .5rem;
+}
+.item1 label{
+    padding-right: .5rem;
+}

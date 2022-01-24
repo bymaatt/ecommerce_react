@@ -4,6 +4,8 @@ import NavBar from './components/Navbar/NavBar';
 import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
+import Formulario from './components/Formulario/Formulario';
+
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           
           
           <Route exact path='/Cart' element= {<Cart />}/>
+
+          <Route exact path='/formulario' element= {<Formulario />} />
 
         </Routes>
       </div>

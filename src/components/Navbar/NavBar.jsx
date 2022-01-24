@@ -21,7 +21,7 @@ function NavBar() {
                                 <a href="/#" className="nav-link">Colección</a> 
                             </li>
                             <li className="nav-item">
-                                <a href="/#" className="nav-link">Contacto</a>
+                                <Link to='/formulario' className="nav-link">Contacto</Link>
                             </li>
                             <li className="nav-item dropdown"  >
                                 <a href="/#ItemList" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías de Producto</a>
