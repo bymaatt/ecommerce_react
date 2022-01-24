@@ -5,13 +5,8 @@ const productos = [
 		"descripcion": "El mas crack",
 		"precio": 4500,
         "stock": 10,
-<<<<<<< HEAD
-        "imagen": "/iron_man.jpg",
-        "categoria": "vengador"
-=======
 		"imagen": "/iron_man.jpg",
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "2",
@@ -20,11 +15,7 @@ const productos = [
         "precio": 5500,
         "stock": 10,
         "imagen": "/spiderman.jpg",
-<<<<<<< HEAD
-        "categoria": "independiente"
-=======
         "categoria": "independientes",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "3",
@@ -33,11 +24,7 @@ const productos = [
         "precio": 4200,
         "stock": 10,
         "imagen": "/thor.jpg",
-<<<<<<< HEAD
-        "categoria": "vengador"
-=======
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "4",
@@ -46,11 +33,7 @@ const productos = [
         "precio": 3500,
         "stock": 10,
         "imagen": "/hulk.jpg",
-<<<<<<< HEAD
-        "categoria": "vengador"
-=======
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "5",
@@ -68,11 +51,7 @@ const productos = [
         "precio": 4500,
         "stock": 10,
         "imagen": "/capitan_america.jpg",
-<<<<<<< HEAD
-        "categoria":"vengador",
-=======
         "categoria": "vengadores,"
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "7",
@@ -81,11 +60,7 @@ const productos = [
         "precio": 4700,
         "stock": 10,
         "imagen": "/black_widow.jpg",
-<<<<<<< HEAD
-
-=======
         "categoria": "vengadores"
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "8",
@@ -94,11 +69,7 @@ const productos = [
         "precio": 4200,
         "stock": 10,
         "imagen": "/ant_man.jpg",
-<<<<<<< HEAD
-        "categoria": "vengador",
-=======
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "9",
@@ -107,11 +78,7 @@ const productos = [
         "precio": 4000,
         "stock": 10,
         "imagen": "/capitana_marvel.jpg",
-<<<<<<< HEAD
-        "categoria": "vengador"
-=======
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
     {
         "id": "10",
@@ -120,11 +87,7 @@ const productos = [
         "precio": 3000,
         "stock": 10,
         "imagen": "/arquero.jpg",
-<<<<<<< HEAD
-        "categoria": "vengador"
-=======
         "categoria": "vengadores",
->>>>>>> 15572a335caf9711a0ca89c89ca6663e749d4df8
     },
 ];
 
