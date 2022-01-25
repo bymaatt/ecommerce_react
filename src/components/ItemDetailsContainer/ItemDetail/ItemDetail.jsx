@@ -2,17 +2,20 @@ import '../../ItemCount/counter.css'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../../ItemCount/ItemCount'
+import { useCartContext } from '../../Context/CartContext'
 
 
 
 
 const ItemDetail = ({product}) => {
 
+    const {agregarAlCarrito} = useCartContext ()
+
     const [show, setShow]= useState (true)
 
     const onAdd = (counter) => {
         setShow(false)
-        alert (`${counter} unidades seleccionadas`)
+        agregarAlCarrito({...product, counter })
     }
 
     return (
@@ -26,7 +29,7 @@ const ItemDetail = ({product}) => {
                 <p className="card-text">Descripción: {product.descripcion}</p>
                 {show ? <ItemCount min = {1} max = {product.stock} reset= {0} onAdd={onAdd}/> :
                 <div>
-                    <Link to= '/cart'><button className='  btn-dark'>Terminar Compra</button></Link>
+                    <Link to= '/cart'><button className='btns1  btn-dark'>Terminar Compra</button></Link>
                     <Link to= '/'><button className='btns1 btn-dark'>Seguir Comprando</button></Link>
                 </div>
                 }

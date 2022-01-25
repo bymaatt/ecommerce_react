@@ -13,10 +13,26 @@ export function useCartContext (){
 export const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
-
+    /* function globalCarrito(){
+        const totalProductos= cartList.map (productoCart=>productoCart.cant).reduce ((prev, curr)=> prev+curr,0)
+        return totalProductos
+    } */
 
     function agregarAlCarrito(items){
-        setCartList ([...cartList, items])
+        const index = cartList.findIndex(i => i.id=== items.id)
+
+        if(index > -1) {
+            const cantOld=cartList[index].counter 
+
+            let cantNueva = cantOld + items.counter
+
+            cartList[index].counter=cantNueva
+
+            let arrAux = [...cartList]
+            setCartList(arrAux)
+        } else {
+            setCartList([...cartList, items])
+        }
     }
 
 
@@ -24,7 +40,7 @@ export const CartContextProvider = ({children}) => {
         setCartList([])
     }
 
-
+    console.log(cartList)
 
     return (
         <CartContext.Provider value = {{
