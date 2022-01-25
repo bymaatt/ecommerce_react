@@ -5,31 +5,34 @@ import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsC
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
 import Formulario from './components/Formulario/Formulario';
+import {CartContextProvider} from './components/Context/CartContext'
 
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <header>
-          <NavBar />
-        </header>
-        <Routes>
-          
-          <Route exact path='/'element= {<ItemListContainer greeting='¡Bienvenidos a mi tienda!' />} />
-          <Route exact path='/categoria/:idCategoria' element = {<ItemListContainer />}/>
-          
-          <Route exact path='/detalle/:idDetalle' element = {<ItemDetailsContainer />}/>
-          
-          
-          <Route exact path='/Cart' element= {<Cart />}/>
+    <CartContextProvider>
+      <BrowserRouter>
+        <div className="App">
+          <header>
+            <NavBar />
+          </header>
+          <Routes>
+            
+            <Route exact path='/'element= {<ItemListContainer greeting='¡Bienvenidos a mi tienda!' />} />
+            <Route exact path='/categoria/:idCategoria' element = {<ItemListContainer />}/>
+            
+            <Route exact path='/detalle/:idDetalle' element = {<ItemDetailsContainer />}/>
+            
+            
+            <Route exact path='/Cart' element= {<Cart />}/>
 
-          <Route exact path='/formulario' element= {<Formulario />} />
+            <Route exact path='/formulario' element= {<Formulario />} />
 
-        </Routes>
-      </div>
-    </BrowserRouter> 
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 

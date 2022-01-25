@@ -33,19 +33,19 @@ function Formulario() {
               <div className='principales'>
                 <div className='item1 item2'>
                   <label for="nombre">
-                    <span>Nombre: *</span>
+                    <span>*Nombre: </span>
                     <input type="text" name="nombre" id='nombre' required onChange={handleImputs}/>
                   </label>
                 </div>
                 <div className='item1 item2'>
                   <label for="apellido">
-                    <span>Apellido: *</span>
+                    <span>*Apellido: </span>
                     <input type="text" name="apellido" id='apellido' required onChange={handleImputs}/>
                   </label>
                 </div>
                 <div className='item1 item2'>
                   <label for= 'mail'>
-                    <span>email: *</span>
+                    <span>*email: </span>
                     <input type="mail" name='mail' id='mail' required />
                   </label>
                 </div>

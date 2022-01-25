@@ -5,6 +5,7 @@ import ItemCount from '../../ItemCount/ItemCount'
 
 
 
+
 const ItemDetail = ({product}) => {
 
     const [show, setShow]= useState (true)
@@ -25,7 +26,7 @@ const ItemDetail = ({product}) => {
                 <p className="card-text">Descripción: {product.descripcion}</p>
                 {show ? <ItemCount min = {1} max = {product.stock} reset= {0} onAdd={onAdd}/> :
                 <div>
-                    <Link to= '/cart'><button className='btns1 btn-dark'>Terminar Compra</button></Link>
+                    <Link to= '/cart'><button className='  btn-dark'>Terminar Compra</button></Link>
                     <Link to= '/'><button className='btns1 btn-dark'>Seguir Comprando</button></Link>
                 </div>
                 }
