@@ -1,14 +1,18 @@
 import React from 'react'
-/* import {useCartContext} from '../../components/Context/CartContext' */
+import './Cart.css'
+import { useCartContext } from '../Context/CartContext'
 
 
 const Cart=() => {
-    /* const {cartList, vaciarCarrito} =useCartContext() */
+    const {cartList, vaciarCarrito} =useCartContext()
     return (
-        <div>
-            Your Cart
-            {/* {cartList.map(productos => <li key={productos.id}>{productos.nombre} - cant: {productos.stock}</li>)}
-            <button onClick={vaciarCarrito}>Vaciar Carrito</button> */}
+        <div className='contenedor_master'>
+            <div className='contenedor_detalle'>
+                {cartList.map(productos => <ul className=" item card-title"><li key={productos.id}>{productos.nombre} - cant: {productos.counter}</li></ul>)}
+            </div>
+            <div className='butt_master'>
+                <button className='btn-dark butt' onClick={vaciarCarrito}>Vaciar Carrito</button>
+            </div>
         </div>
     )
 }
