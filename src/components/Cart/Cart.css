@@ -29,13 +29,8 @@
     align-items: center;
 }
 
-.boton{
-    /* display: flex;
-    flex-direction: row; */
-    margin-left: 1rem;
-}
 .butt_master{
-    margin-top: 4.5rem;
+    margin-top: .5rem;
 }
 
 .butt_master .butt{
