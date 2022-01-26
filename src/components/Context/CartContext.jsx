@@ -42,10 +42,16 @@ export const CartContextProvider = ({children}) => {
 
     console.log(cartList)
 
+    const deleteItem = (id) => {
+            const eliminarItem = cartList.filter((producto)=> producto.id !== id)
+            setCartList(eliminarItem)
+    }
+
     return (
         <CartContext.Provider value = {{
             cartList,
             agregarAlCarrito,
+            deleteItem,
             vaciarCarrito
         }}>
             {children}
