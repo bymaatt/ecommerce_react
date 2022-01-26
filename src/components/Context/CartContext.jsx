@@ -13,11 +13,6 @@ export function useCartContext (){
 export const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
-    /* function globalCarrito(){
-        const totalProductos= cartList.map (productoCart=>productoCart.cant).reduce ((prev, curr)=> prev+curr,0)
-        return totalProductos
-    } */
-
     function agregarAlCarrito(items){
         const index = cartList.findIndex(i => i.id=== items.id)
 
@@ -53,13 +48,22 @@ export const CartContextProvider = ({children}) => {
         return totalCart
     }
 
+    const cantTotal = () => {
+        let cuentaCant = 0
+        cartList.forEach ((producto)=>{
+            cuentaCant += producto.counter 
+        })
+        return cuentaCant
+    }
+
     return (
         <CartContext.Provider value = {{
             cartList,
             agregarAlCarrito,
             deleteItem,
             vaciarCarrito,
-            total
+            total,
+            cantTotal
         }}>
             {children}
         </CartContext.Provider>
