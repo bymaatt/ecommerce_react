@@ -78,7 +78,7 @@ const productos = [
         "precio": 4000,
         "stock": 10,
         "imagen": "/capitana_marvel.jpg",
-        "categoria": "vengadores",
+        "categoria": "independientes",
     },
     {
         "id": "10",
