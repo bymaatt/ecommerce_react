@@ -1,8 +1,9 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail/ItemDetail'
-import { traerProductos } from '../Productos/Productos'
+/* import { traerProductos } from '../Productos/Productos' */
 import { useParams } from 'react-router-dom'
+import { getDoc, getFirestore, doc } from 'firebase/firestore'
 
 const ItemDetailsContainer = () => {
 
@@ -10,8 +11,19 @@ const ItemDetailsContainer = () => {
 
     const {idDetalle} = useParams ()
 
+
+
     useEffect (() => {
-            traerProductos.then (resp => setProduct(resp.find(product => product.id===idDetalle) ))
+
+        const db = getFirestore ()
+        const queryCollection = doc(db, 'productos', idDetalle)
+        getDoc (queryCollection)
+        .then ((res) => {setProduct({id:res.id, ...res.data()})})
+    
+
+
+
+           /*  traerProductos.then (resp => setProduct(resp.find(product => product.id===idDetalle) )) */
         
     }, [idDetalle])
 
