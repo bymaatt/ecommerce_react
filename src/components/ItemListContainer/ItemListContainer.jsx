@@ -13,9 +13,11 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect(() => {
 
+        const db = getFirestore()
+
         if(idCategoria){
             
-            const db = getFirestore()
+            
 
             const queryCollection =  query (collection (db, 'productos'), where('categoria', '==', idCategoria))
             
@@ -23,9 +25,8 @@ const ItemListContainer = ({greeting}) => {
             .then(res => setProduct( res.docs.map((prod) => ({ id: prod.id, ...prod.data() })) ))
             .catch(err => err)
             .finally (() => setLoading(false))
-
         }else {
-            const db = getFirestore()
+            /* const db = getFirestore() */
 
         const queryCollection =  collection (db, 'productos')
         
