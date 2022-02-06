@@ -16,42 +16,22 @@ const CartItem = () => {
         tel: '',
     }) 
 
-    const product = cartList.map(CartItem => {
-        const id = CartItem.id;
-        const nombre = CartItem.title;
-        const precio = CartItem.precio * CartItem.counter;
-        const cantidad = CartItem.counter;
-        return {id, nombre, precio, cantidad}
-    })
-        const orden= {buyer: dataForm, total: total(), items: product}
-        console.log('se muestra orden', orden)
-        console.log(cartList)
+    
 
     const realizarCompra = async (e) => {
         e.preventDefault()
 
-
-        /* const orden= {} */
-
-        /* orden.buyer = dataForm
-        orden.total = total(); */
-        /* const products = cartList.map(CartItem => {
-            const id = CartItem.id;
-            const nombre = CartItem.title;
-            const precio = CartItem.precio * CartItem.cantTotal;
-            const cantidad = CartItem.cantTotal;
-            return {id, nombre, precio, cantidad}
-        })
-        const orden= { buyer: dataForm, total: total(), items: products} */
-
-        /* orden.items = cartList.map(CartItem => {
+        const product = cartList.map(CartItem => {
             const id = CartItem.id;
             const nombre = CartItem.nombre;
-            const precio = CartItem.precio * CartItem.cantTotal;
-            const cantidad = CartItem.cantTotal;
-
+            const precio = CartItem.precio * CartItem.counter;
+            const cantidad = CartItem.counter;
             return {id, nombre, precio, cantidad}
-        }) */
+        })
+            const orden= {buyer: dataForm, total: total(), items: product}
+            console.log('se muestra orden', orden)
+            console.log(cartList)
+
 
         const db = getFirestore ()
         const ordenCollection = collection (db, 'ordenes')
@@ -75,7 +55,14 @@ const CartItem = () => {
             })
         ))
         .catch(err => console.log(err))
-        .finally (() => console.log ('stock actualizado'))
+        .finally (
+            setDataForm({
+                name:'',
+                apellido:'',
+                email:'',
+                tel: '',
+            }),
+            console.log ('stock actualizado'))
 
         batch.commit()
 
