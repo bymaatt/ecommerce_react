@@ -55,7 +55,7 @@ const CartItem = () => {
             })
         ))
         .catch(err => console.log(err))
-        .finally (
+        .finally (()=>
             setDataForm({
                 name:'',
                 apellido:'',
@@ -77,6 +77,9 @@ const CartItem = () => {
         })
     }
     console.log(dataForm)
+
+
+
 
   return (
     <div className='contenedor_master'>
