@@ -88,8 +88,7 @@ const CartItem = () => {
             <button className='btn-dark butt' onClick={vaciarCarrito}>Vaciar Carrito</button>
         </div>
         <div>
-            <form action="" onSubmit={realizarCompra} //onChange={handleChange}
-            >
+            <form action="" onSubmit={realizarCompra}>
                 <input type="text" name='name' placeholder='*Nombre' onChange={handleChange} value={dataForm.name} required
                 />
                 <br/>
