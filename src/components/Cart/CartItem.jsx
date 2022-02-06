@@ -51,7 +51,7 @@ const CartItem = () => {
 
         await getDocs(queryActualizarStock)
         .then (resp => resp.docs.forEach(res => batch.update(res.ref, {
-            stock: res.data().stock - cartList.find(item => item.id === res.id).cantTotal
+            stock: res.data().stock - cartList.find(item => item.id === res.id).counter
             })
         ))
         .catch(err => console.log(err))
