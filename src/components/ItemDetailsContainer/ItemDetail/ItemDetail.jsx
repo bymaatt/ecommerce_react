@@ -21,7 +21,7 @@ const ItemDetail = ({product}) => {
     return (
         <div id='ItemList' className='arreglo_mio'>
             <div className='arreglo_img'>
-                <img id="img_arreglo" src={product.imagen} className="card-img-top" alt={product.nombre}/>
+                <img id="img_arreglo" src={product.imagenURL} className="card-img-top" alt={product.nombre}/>
             </div>
             <div className="arreglo_description">
                 <h2 className="card-title">{product.nombre}</h2>
