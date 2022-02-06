@@ -40,7 +40,7 @@ const CartItem = () => {
         .catch (err => console.log(err))
         .finally(() => console.log('cargando'))
 
-        const queryCollection = collection (db, 'items')
+        const queryCollection = collection (db, 'productos')
 
         const queryActualizarStock = query (
             queryCollection, where (documentId(), 'in', cartList.map (it => it.id))
@@ -50,7 +50,18 @@ const CartItem = () => {
         const batch = writeBatch (db)
 
         await getDocs(queryActualizarStock)
-        .then (resp => resp.docs.forEach(res => batch.update(res.ref, {
+            .then (resp => {
+                console.log('resp', resp.docs.forEach(res => res))
+                resp.docs.forEach(res => {
+                console.log('res', res)
+                console.log('cartList counter', cartList.find(item => item.id === res.id).counter)
+                batch.update(res.ref, {
+                            stock: res.data().stock - cartList.find(item => item.id === res.id).counter
+                            })
+                        })
+                })
+
+        /* .then (resp => resp.docs.forEach(res => batch.update(res.ref, {
             stock: res.data().stock - cartList.find(item => item.id === res.id).counter
             })
         ))
@@ -62,9 +73,9 @@ const CartItem = () => {
                 email:'',
                 tel: '',
             }),
-            console.log ('stock actualizado'))
+            console.log ('stock actualizado')) */
 
-        batch.commit()
+        /* batch.commit() */
 
     }
 
