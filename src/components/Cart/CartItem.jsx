@@ -3,7 +3,7 @@ import './Cart.css'
 /* import gracias from '../Cart/Gracias' */
 import { useCartContext } from '../Context/CartContext'
 import { getFirestore,  addDoc, collection, documentId, getDocs, writeBatch, where, query} from 'firebase/firestore';
-/* import { Link } from 'react-router-dom'; */
+import { Link } from 'react-router-dom';
 
 
 
@@ -80,6 +80,8 @@ const CartItem = () => {
     }
     console.log(dataForm)
 
+
+
     const item3 = cartList.map(productos => <ul className='item card-title'><li key={productos.id}> {productos.nombre} - Cant: {productos.counter} <button className='btns1' onClick={()=> deleteItem(productos.id)}>x</button> </li></ul>)
 
 
@@ -99,6 +101,7 @@ const CartItem = () => {
         <div className='butt_master'>
             <button className='btn-dark butt' onClick={vaciarCarrito}>Vaciar Carrito</button>
         </div>
+        <br />
         <div>
             <form action="" onSubmit={realizarCompra}>
                 <input type="text" name='name' placeholder='*Nombre' onChange={handleChange} value={dataForm.name} required
@@ -113,9 +116,10 @@ const CartItem = () => {
                 <input type="email" name='email' placeholder='*email' onChange={handleChange} value={dataForm.email} required
                 />
                 <br />
-
-                <button className='btns btn-danger'>Confirmar compra</button>
-
+                <br />
+                <Link to='/gracias'>
+                    <button className='btns btn-danger'>Confirmar compra</button>
+                </Link>
             </form>
             
         </div>
