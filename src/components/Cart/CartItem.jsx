@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Cart.css'
-/* import purchaseForm from '../purchaseForm/purchaseForm'; */
+/* import gracias from '../Cart/Gracias' */
 import { useCartContext } from '../Context/CartContext'
 import { getFirestore,  addDoc, collection, documentId, getDocs, writeBatch, where, query} from 'firebase/firestore';
+/* import { Link } from 'react-router-dom'; */
+
 
 
 const CartItem = () => {
@@ -78,13 +80,13 @@ const CartItem = () => {
     }
     console.log(dataForm)
 
-
+    const item3 = cartList.map(productos => <ul className='item card-title'><li key={productos.id}> {productos.nombre} - Cant: {productos.counter} <button className='btns1' onClick={()=> deleteItem(productos.id)}>x</button> </li></ul>)
 
 
   return (
     <div className='contenedor_master'>
         <div className='contenedor_detalle'>
-            {cartList.map(productos =><ul className=" item card-title"><li key={productos.id}>{productos.nombre} - cant: {productos.counter} <button className='btns1' onClick={() => deleteItem(productos.id)}>x</button></li></ul>)}
+            {item3}
         </div>
         <div className='totales'>
             <div className='precio_total'>
@@ -111,10 +113,8 @@ const CartItem = () => {
                 <input type="email" name='email' placeholder='*email' onChange={handleChange} value={dataForm.email} required
                 />
                 <br />
-                
-                <div className='butt_master'>
-                    <button className='btns btn-danger'>Confirmar compra</button>
-                </div>
+
+                <button className='btns btn-danger'>Confirmar compra</button>
 
             </form>
             
